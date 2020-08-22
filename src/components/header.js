@@ -29,57 +29,60 @@ const Header = ({ siteTitle }) => {
   return (
     <>
       <header
-        className="level is-mobile"
         style={{
           background: "var(--purp)",
           boxShadow: "var(--elevation-2)",
           padding: "10px 2%",
         }}
       >
-        <div className="level-left">
-          <Link to="/">
-            <img
-              style={{ height: 60, maxHeight: "none", marginBottom: 0 }}
-              src={logo}
-              alt="Level Up Logo"
-            />
-          </Link>
-          <Nav />
-        </div>
-        <div className="level-right">
-          <div>
-            <button
-              onClick={toggleCartOpen}
-              className="button"
-              style={{
-                background: "transparent",
-                border: "none",
-                position: "relative",
-              }}
-            >
-              {!!qty && (
-                <div
-                  style={{
-                    background: "var(--red)",
-                    borderRadius: 15,
-                    color: "white",
-                    height: 30,
-                    left: -5,
-                    lineHeight: "30px",
-                    position: "absolute",
-                    textAlign: "center",
-                    top: -5,
-                    width: 30,
-                  }}
-                >
-                  {qty}
-                </div>
-              )}
-              <FaShoppingCart
-                style={{ color: "white", height: 30, width: 30 }}
+        <div className="level is-mobile">
+          <div className="level-left">
+            <Link to="/">
+              <img
+                style={{ height: 60, maxHeight: "none", marginBottom: 0 }}
+                src={logo}
+                alt="Level Up Logo"
               />
-            </button>
+            </Link>
           </div>
+          <div className="level-right">
+            <div>
+              <button
+                onClick={toggleCartOpen}
+                className="button"
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  position: "relative",
+                }}
+              >
+                {!!qty && (
+                  <div
+                    style={{
+                      background: "var(--red)",
+                      borderRadius: 15,
+                      color: "white",
+                      height: 30,
+                      left: -5,
+                      lineHeight: "30px",
+                      position: "absolute",
+                      textAlign: "center",
+                      top: -5,
+                      width: 30,
+                    }}
+                  >
+                    {qty}
+                  </div>
+                )}
+                <FaShoppingCart
+                  style={{ color: "white", height: 30, width: 30 }}
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="level is-mobile" style={{ marginBottom: 10 }}>
+          <Nav className="level-item" />
         </div>
         {transitions.map(({ item, key, props }) => {
           return item && <Cart key={key} style={props} />
