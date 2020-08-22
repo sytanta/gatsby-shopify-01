@@ -24,7 +24,7 @@ const Nav = () => {
           <Link
             to={`/category/${nav.handle}`}
             key={nav.handle}
-            style={{ color: "#fff", marginLeft: 15 }}
+            style={{ color: "#fff", marginRight: 20 }}
           >
             {nav.title}
           </Link>

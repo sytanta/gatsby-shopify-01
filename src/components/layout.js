@@ -1,10 +1,8 @@
-import React, { useContext } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import "../styles/global.scss"
-
-import { StoreContext } from "../context/StoreContext"
 
 import Header from "./header"
 
@@ -19,15 +17,10 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const { isCartOpen } = useContext(StoreContext)
-
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        className={`body ${isCartOpen ? "cart-open" : ""}`}
-        style={{ display: "flex", flexDirection: "column" }}
-      >
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <main className="section" style={{ minHeight: "90vh" }}>
           {children}
         </main>

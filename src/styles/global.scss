@@ -86,8 +86,10 @@
 /* Cart */
 .cart-container {
   background: #fff;
+  bottom: 0;
   box-shadow: var(--elevation-2);
-  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding: 40px 2%;
   position: fixed;
   right: 0;
@@ -97,12 +99,6 @@
 }
 
 @media (max-width: 600px) {
-  .body.cart-open {
-    height: 50vh;
-    overflow: hidden;
-    width: 100%;
-  }
-
   .cart-container {
     width: 100%;
   }
