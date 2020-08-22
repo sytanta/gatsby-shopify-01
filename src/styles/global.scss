@@ -88,8 +88,7 @@
   background: #fff;
   bottom: 0;
   box-shadow: var(--elevation-2);
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   padding: 40px 2%;
   position: fixed;
   right: 0;
@@ -100,6 +99,8 @@
 
 @media (max-width: 600px) {
   .cart-container {
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
   }
 }
