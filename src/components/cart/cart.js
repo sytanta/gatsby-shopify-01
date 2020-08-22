@@ -104,7 +104,13 @@ const Cart = ({ style }) => {
                     onChange={e => setCoupon(e.target.value)}
                   />
                 </div>
-                <button className="button">Add Coupon</button>
+                <button className="button">Add Coupon</button>{" "}
+                <span
+                  onClick={() => checkCoupon("gatsby")}
+                  className="button is-transparent"
+                >
+                  Try with "<strong>gatsby</strong>"!
+                </span>
               </form>
             )}
           </div>
