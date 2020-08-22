@@ -10,7 +10,6 @@ import Nav from "./nav"
 import Cart from "./cart/cart"
 import Loader from "./loader"
 
-import "../styles/global.scss"
 import logo from "../images/logo.svg"
 
 const Header = ({ siteTitle }) => {

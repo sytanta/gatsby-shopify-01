@@ -81,9 +81,6 @@
 
   /* Margin */
   --margin: 2.75rem 0 1rem;
-
-  /* Breakpoints */
-  --tablet: 600px;
 }
 
 /* Cart */
@@ -99,7 +96,12 @@
   z-index: 100;
 }
 
-@media (max-width: var(--tablet)) {
+@media (max-width: 600px) {
+  .body.cart-open {
+    height: 50vh;
+    overflow: hidden;
+  }
+
   .cart-container {
     width: 100%;
   }
